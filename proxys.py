@@ -34,7 +34,6 @@ def main():
       s = requests.get(c, proxies=proxyDict)
       f = Soup(s.text, 'html.parser')
       # print(f.text)
-
       emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", f.text)
       m = set(emails)
       # for i in m:
